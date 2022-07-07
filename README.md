@@ -11,6 +11,7 @@ Write code that generates a random permutation of the given array's elements wit
 
 [Better idea after thinking about it](#better-idea-after-thinking-about-it)
 
+[Output for the lazy](#output-for-the-lazy)
 ### Environment setup
   
 ```cpp
@@ -151,4 +152,49 @@ assuming randInN() is O(1),
 This implementation is O(N) as it iterates over the array once and that's it.
 
 
+## Output for the lazy
+<details>
+
+```
+The idea I tried to explain during our meeting, which wasn't good enough:
+
+Original input
+{58 36 7 94 12 47 22 78 }
+First shuffle:
+step 1 {0 0 0 0 0 58 0 0 }
+step 2 {36 0 0 0 0 58 0 0 }
+step 3 {36 0 0 0 0 58 0 7 }
+step 4 {36 0 0 0 94 58 0 7 }
+step 5 {36 12 0 0 94 58 0 7 }
+step 6 {36 12 47 0 94 58 0 7 }
+step 7 {36 12 47 22 94 58 0 7 }
+step 8 {36 12 47 22 94 58 78 7 }
+
+Shuffled result : {36 12 47 22 94 58 78 7 }
+
+Second shuffle(should be different):
+step 1 {0 0 0 0 0 0 0 58 }
+step 2 {0 0 36 0 0 0 0 58 }
+step 3 {7 0 36 0 0 0 0 58 }
+step 4 {7 0 36 94 0 0 0 58 }
+step 5 {7 12 36 94 0 0 0 58 }
+step 6 {7 12 36 94 0 0 47 58 }
+step 7 {7 12 36 94 22 0 47 58 }
+step 8 {7 12 36 94 22 78 47 58 }
+
+Shuffled result : {7 12 36 94 22 78 47 58 }
+
+
+
+Better idea after thinking about it:
+
+Original input
+{58 36 7 94 12 47 22 78 }
+First shuffle:
+{78  36  12  58  7  94  22  47  }
+Second shuffle(should be different):
+{12  58  36  7  94  78  47  22  }
+```
+
+</details>
 
