@@ -5,6 +5,35 @@ Suggested solution for randInN riddle and discussion of the solution
 Given an array of N non-negative integers, and a given function that randomizes an int in range [0,n] (**NOTE n!=N**)
 Write code that generates a random permutation of the given array's elements with every run.
 
+```cpp
+// GIVEN BASE //
+
+vector<int> arrayOfN{ 58, 36, 7, 94, 12, 47, 22 ,78 };  // example input
+
+// returns random number in range of [0,N]
+int randInN(int n) {
+	// implementation doesn't matter
+}
+
+// helper function for printing
+void printArr(vector<int> arr) {
+	std::cout << "{";
+	for (int i = 0; i < N; i++)
+		cout << arr[i] << " ";
+	std::cout << "}" << std::endl;
+}
+```
+
+## follow-up questions:
+<details>
+
+- What is your solution's complexity?
+- Can you make it O(N) for worst case scenario?
+- Can you make a solution that is valid regardless to the "quality" of the rando,iozation function? Means that the soultion will be valid even in case of a function that always return the same number?
+</details>
+</br>
+
+## Content table
  [Environment setup](#environment-setup)
  
  [Not good enough solution I tried to do on our meeting](#not-good-enough-solution-i-tried-to-do-on-our-meeting)
@@ -197,4 +226,6 @@ Second shuffle(should be different):
 ```
 
 </details>
+
+
 
